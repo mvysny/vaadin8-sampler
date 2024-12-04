@@ -3,6 +3,8 @@
 Template for a simple Vaadin application that only requires a Servlet 3.0 container to run.
 Ideal for testing Vaadin 8 component functionality on the actual framework.
 
+[Live Demo at v-herd.eu](https://v-herd.eu/vaadin8-sampler).
+
 ## Workflow
 
 To compile the entire project, run `mvn -C clean package`.
