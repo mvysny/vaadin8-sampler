@@ -11,7 +11,7 @@ FROM eclipse-temurin:11 AS BUILD
 RUN apt update && apt install unzip -y
 COPY . /app/
 WORKDIR /app/
-RUN ./mvnw -C clean test package -Pproduction
+RUN ./mvnw -C clean package
 WORKDIR /app/target/
 RUN ls -la
 RUN unzip *.zip -d app/
