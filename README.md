@@ -5,6 +5,22 @@ Ideal for testing Vaadin 8 component functionality on the actual framework.
 
 [Live Demo at v-herd.eu](https://v-herd.eu/vaadin8-sampler).
 
+This app demoes all the free core components offered by the Vaadin 8 framework,
+including the Vaadin 7 compatibility package. Every panel demoes one component and shows
+two parts:
+
+* The component itself, demoed as-is
+* The left pane allows you to control the behavior of the component: it should contain
+  controls for all aspects of the component:
+  * The behavior of the component, including the caption of the component, tooltip,
+    enablement, readonly-ness for fields, etc
+  * The themes and styles
+
+You can use the idea of the "Sampler" to demo the custom components of your own app
+the same way - you would demo all of your custom layouts, components and fields:
+their behavior, colors, styles. The idea is to have a
+go-to off-the-shelf recipes and best practices, for new developers to follow.
+
 ## Workflow
 
 To compile the entire project, run `mvn -C clean package`.
