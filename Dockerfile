@@ -1,7 +1,7 @@
 # Allows you to run this app easily as a docker container.
 # See README.md for more details.
 #
-# 1. Build the image with: docker build --no-cache -t test/vaadin8-sampler:latest .
+# 1. Build the image with: docker build -t test/vaadin8-sampler:latest .
 # 2. Run the image with: docker run --rm -ti -p8080:8080 -m256m test/vaadin8-sampler
 #
 # Uses Docker Multi-stage builds: https://docs.docker.com/build/building/multi-stage/
@@ -11,7 +11,7 @@ FROM eclipse-temurin:11 AS BUILD
 RUN apt update && apt install unzip -y
 COPY . /app/
 WORKDIR /app/
-RUN ./mvnw -C clean package
+RUN --mount=type=cache,target=/root/.m2 ./mvnw -C clean package
 WORKDIR /app/target/
 RUN ls -la
 RUN unzip *.zip -d app/
